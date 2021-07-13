@@ -1,0 +1,268 @@
+body {
+	margin:  0;
+	width: 100%;
+	margin:  0 auto;
+	background-color: antiquewhite;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-o-justify-content: center;
+	-ms-justify-content: center;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-o-align-items: center;
+	-ms-align-items: center;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+}
+
+.form-v6-content  {
+	background: #fff;
+	width: 100%;
+	margin-top:25%;
+	margin-bottom:25%;
+	/* margin-left:15%; */
+	margin-right:30%;
+	border-radius: 8px;
+	/* border-top-right-radius: 50px!important; */
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	/* margin: auto; */
+	font-family: 'Nunito', sans-serif;
+	color: #fff;
+	font-weight: 700;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+}
+
+.form-v6-content .form-detail {
+    padding: 20px 30px;
+	position: relative;
+	width: 100%;
+}
+
+.form-detail h2 {
+	color: #333;
+	font-size: 35px;
+	text-align: center;
+	position: relative;
+	padding: 5px 0 0;
+	margin-bottom: 20px;
+}
+
+.form-v6-content .form-row {
+    width: 100%;
+}
+
+.form-v6-content .form-detail .form-row-last {
+	text-align: center;
+}
+.form-detail .form-row, .col-md-6, .col-md-12 {
+	margin-bottom: 15px;
+}
+.form-detail input[type=tel], input[type=password], input[type=text], input[type=email], input[type=submit], input[type=number], input[type=date], .form-select{
+	width: 92%;
+    padding: 0px 10px 5px 10px;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #e5e5e5;
+    appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.input-group-text{
+	border: 2px solid transparent;
+	border-bottom: 2px solid #e5e5e5;
+	appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+    font-weight: 700;
+    color: #333;
+	background-color: #fff;
+}
+
+.form-label{
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+	color: #333;
+	margin-left: 15px;
+}
+
+/* .form-v6-content .form-detail input[checkbox]{
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+	color: #333!important;
+	margin-left: 15px;
+	float: left;
+	border: 2px solid red;
+} */
+
+.label {
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+	color: #333!important;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.form-v6-content .form-detail .form-row a{
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+	float: right;
+	color:#feb35d;
+	text-decoration: none;
+}
+.label-signup, .label-login {
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+	color: #333!important;
+	text-align: center!important;
+}
+.form-v6-content .form-detail a{
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+	color:#feb35d;
+	text-decoration: none;
+}
+
+.error{
+	color: red;
+	font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.form-detail .form-row input:focus {
+	border-bottom: 2px solid #feb35d;
+}
+.form-detail input:focus, .form-select:focus {
+	border: none;
+	border-bottom: 2px solid #feb35d;
+	appearance: unset;
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;
+    outline: none !important;
+	box-shadow: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+}
+.form-detail .register, .loginbtn, .save {
+	background: #feb35d;
+	border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	width: 160px;
+	box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+	border: none;
+	margin: 5px 0 20px 0px;
+	cursor: pointer;
+	font-family: 'Nunito', sans-serif;
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+}
+.form-v6-content .form-detail .register:hover, .loginbtn:hover, .save:hover {
+	background: #e37b27;
+}
+.form-v6-content .form-detail .form-row-last input {
+	padding: 13px;
+}
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #666;
+  font-size: 16px;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: #666;
+  font-size: 16px;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+  color: #666;
+  font-size: 16px;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: #666;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 991px) {
+	.form-v6-content {
+		margin: 180px 20px;
+		flex-direction:  column;
+		-o-flex-direction:  column;
+		-ms-flex-direction:  column;
+		-moz-flex-direction:  column;
+		-webkit-flex-direction:  column;
+	}
+	.form-v6-content .form-left {
+		width: 100%;
+	}
+	.form-v6-content .form-left img {
+		width: 100%;
+		border-bottom-left-radius: 0px;
+	    border-top-right-radius: 8px;
+	}
+	.form-v6-content .form-detail {
+		padding: 30px 20px 30px 20px;
+	    width: auto;
+	}
+	.form-v6-content .form-detail .form-row input {
+		width: 96%;
+	}
+	.form-v6-content .form-detail .register {
+		margin-bottom: 80px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.form-v6-content .form-detail .form-row input {
+		width: 94%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.form-v6-content .form-detail .form-row input {
+	    width: 89%;
+	}
+}

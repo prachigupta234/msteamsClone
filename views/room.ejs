@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>videoChatApp</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  <script>
+    const ROOM_ID = "<%= roomId %>";
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <div class="header__back">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <h3>Video Chat</h2>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main__left">
+      <div class="videos__group">
+        <div id="video-grid">
+
+        </div>
+      </div>
+      <div class="options">
+        <div class="options__left">
+          <div id="stopVideo" class="options__button">
+            <i class="fa fa-video-camera"></i>
+          </div>
+          <div id="muteButton" class="options__button">
+            <i class="fa fa-microphone"></i>
+          </div>
+          <div id="showChat" class="options__button">
+            <i class="fa fa-comment"></i>
+          </div>
+          <div id="inviteButton" class="options__button">
+            <i class="fas fa-user-plus"></i>
+          </div>
+        </div>
+        <div class="options__right">
+          <div id="endcall" class="cut__button">
+            <a href="/logout">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172"
+              style=" fill:#000000;">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M86,28.66667c-28.4445,0.1505 -56.39002,11.44438 -76.92969,31.98405c-3.03867,3.03867 -1.98517,7.07115 0,9.05632l15.88704,15.87305c2.46533,2.46533 6.4285,2.51998 8.95833,0.11198c2.91683,-2.78067 6.67026,-6.19917 9.33626,-8.0625c2.88817,-2.021 7.8307,-3.85085 10.55404,-5.27702c2.13567,-1.12517 3.46419,-3.34493 3.47135,-5.75293l0.05599,-18.09863c10.58517,-3.28233 19.23533,-4.84377 28.66667,-4.8151c9.43133,-0.02867 18.0815,1.53277 28.66667,4.8151l0.06999,18.09863c0.00717,2.41517 1.32168,4.63493 3.45736,5.75293c2.71617,1.43333 7.67303,3.25602 10.55403,5.27702c2.67317,1.86333 6.42626,5.29583 9.35026,8.0765c2.52267,2.408 6.48583,2.35335 8.95833,-0.11198l15.87305,-15.88704c1.98517,-1.98517 3.03867,-6.00365 0,-9.04232c-20.54683,-20.54683 -48.48519,-31.84755 -76.92969,-31.99805zM78.83333,78.83333v35.83333h-21.84993l28.66667,28.66667l28.66667,-28.66667h-21.15007v-35.83333z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </a>
+          </div>
+          <!-- <div id="inviteButton" class="options__button">
+            <i class="fas fa-user-plus"></i>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="main__right">
+      <div class="main__chat_window">
+        <div class="messages">
+
+        </div>
+      </div>
+      <div class="main__message_container">
+        <input id="chat_message" type="text" autocomplete="off" placeholder="Type message here...">
+        <div id="send" class="options__button">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/script.js"></script>
+
+</html>

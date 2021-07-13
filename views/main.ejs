@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>videoChatApp</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+  <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-left">
+      <div class="logo" style="padding-left:5%">
+        <h3>Microsoft Teams Clone</h2>
+      </div>
+      <!-- <div class="logo" style="justify-content:right;padding-left:5%">
+      <a href="/logout">Logout</a>
+    </div> -->
+    </div>
+    <div class="header-right">
+      <div class="logo" style="padding-left:65%">
+        <a href="/logout" style="color:white">Logout</a>
+      </div>
+    </div>
+  </div>
+  <div class="main" style="padding-left:5%;padding-top: 2%;background-color: var(--main-dark)">
+    <!-- <h4>Start a Video Call <a href="/call"><i class="fa fa-video-camera"></i></a></h4> -->
+    <div class="row">
+      <div class="col-md-4">
+        <h4 style="color:white">Start a Video Call - <a href="/call">Click Here <i class="fa fa-video-camera" style="padding-left:5px"></i></a></h4>
+      </div></br></br>
+      <div class="col-md-8" style="margin-right: 5%;color:white">
+        <!-- <h4>Start a Video Call</h4><a href="/call"><i class="fa fa-video-camera"></i></a> -->
+        <h4>All Users</h4>
+        <div style="padding-left: 10%;">
+        <ul class="users" style="padding-left: 5%;">
+          <% all.forEach(function(all) { %>
+          <li class="person" data-chat="person1">
+            <p class="name-time">
+              <a href="/chat/<%= all.name %>" class="name" style="color:white"><%= all.name %></a>
+              <!-- <div class="options__button"> -->
+              <!-- </div> -->
+            </p>
+            <% }); %>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>

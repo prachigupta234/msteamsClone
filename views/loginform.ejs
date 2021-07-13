@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<!-- <link rel="stylesheet" type="text/css" href="/css/nunito-font.css"> -->
+	<!-- Main Style Css -->
+	<%- include("cdn/style.ejs") -%>
+	<link rel="stylesheet" href="/style-login.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style>
+		/* The Close Button */
+		.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
+
+</head>
+
+<body class="form-v6">
+	<% if(err!==''){ %>
+		<div class="alert alert-danger alert-dismissible fade show"
+			style="padding: 2px; text-align: center; " role="alert">
+			<span id="msg"><%=err%></span>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding: inherit;">
+				<span aria-hidden="true">&times;</span>
+			</button>
+	</div>
+	<% }%>
+	<!-- Trigger/Open The Modal -->
+	<!-- <button id="myBtn">Open Modal</button> -->
+	<div class="page-content">
+		<div class="form-v6-content" id="loginModal">
+
+			<!-- <div class="form-left">
+				<img src="images/form-v6.jpg" alt="form">
+			</div> -->
+			<form class="form-detail login" id="loginform" action="login" method="post">
+				<!-- <span class="close">&times;</span> -->
+				<h2>LOGIN</h2>
+				<div class="form-row">
+					<label for="phone" class="form-label">Phone Number*:</label><br>
+					<input type="tel" name="phone" id="phone" pattern="^\d{10}$" class="input-text phone"
+						placeholder="Enter phone number">
+						<div id="phoneHelp" class="form-text"></div>
+				</div>
+				<div class="form-row">
+					<label for="password" class="form-label">Password*:</label><br>
+					<input type="password" name="password" id="password" class="input-text password"
+						placeholder="Enter Password">
+						<div id="passwordHelp" class="form-text"></div>
+				</div>
+				<!-- <div class="form-row">
+					<label class="label">
+						<input type="checkbox" name="checkbox" value="remember">Remember Me
+					</label>
+					<a class="forgot-password-link" href="#">Forgot password</a>
+				</div> -->
+				<br>
+
+				<div class="form-row-last">
+					<input type="submit" name="loginbtn" class="loginbtn" value="Login">
+				</div>
+				<label class="label-signup">
+					New around here?<a class="signup-link" href="/signup"> Sign up</a>
+				</label>
+
+			</form>
+
+		</div>
+	</div>
+	
+	<%- include("cdn/script.ejs") -%>
+
+	<script>
+		$(document).ready(function() {
+			$('#loginform').submit(e=>{
+		   const number = $('#phone').val();
+		   const password = $('#password').val();
+		   if(number==='' || number.length!==10){
+			   e.preventDefault();
+			   $('#phoneHelp').text('Please Enter a 10 digit valid Mobile Number').css('color', 'red');
+		   }else if(password===''){
+			   e.preventDefault();
+			   $('#passwordHelp').text('Please Enter Password').css('color', 'red');
+		   }else{
+			   e.target.elements.number.value=number; 
+		   }
+	   });
+
+	   });
+	</script>
+
+</body>
+
+</html>
