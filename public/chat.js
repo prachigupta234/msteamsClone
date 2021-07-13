@@ -6,7 +6,7 @@ let messages = document.querySelector(".messages");
 var peer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "8000",
+    port: "443",
 });
 peer.on("open", (id) => {
     socket.emit("join-room", CHAT_ID, id, user);
